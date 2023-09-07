@@ -147,7 +147,7 @@ export const ServiceCard = styled.div`
     width: 200px;
     height: 120px;
     gap: 10px;
-    background-color: ${({back}) => back == 'true' ? '#0475e6' : '#e6f1fc'};
+    background-color: ${({back}) => back == 'true' ? '#de4503' : '#e6f1fc'};
     color:  ${({back}) => back == 'true' ? 'white' : 'black'};
     text-shadow: ${({back}) => back == 'true' ? '0 2px 5px #000000b0' : '0 2px 5px #ffffff'};
     font-weight: 700;
@@ -162,7 +162,7 @@ export const CircleImage = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #0056ad;
+    background-color: #a13303;
     img{
         filter: invert(1);
     }
