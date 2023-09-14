@@ -6,7 +6,7 @@ const WhatsApp = () => {
     return (
         <Container>
             <a href="https://api.whatsapp.com/send?phone=+5493873693495">
-                <Image src={'/images/WhatsApp.png'} width={50} height={50} alt='whatsapp' />
+                <Image src={'/images/whatsapp.png'} width={50} height={50} alt='whatsapp' />
             </a>
         </Container>
     );
