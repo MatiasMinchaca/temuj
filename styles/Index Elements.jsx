@@ -50,16 +50,14 @@ export const Presentation = styled.section`
         background-size: cover;
         background-position: center;
         z-index: -1;
+        filter: brightness(0.7);
     }
     &::after{
         content: "";
-        background-color: #00000054;
         position: absolute;
         height: 100%;
         width: 100%;
         z-index: 0;
-        top: 0;
-        filter: blur(2px);
     }
     h1{
         color: white;
@@ -102,7 +100,6 @@ export const Buttons = styled.div`
 
 export const Section1 = styled.section`
     width: 100%;
-    height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -170,5 +167,63 @@ export const CircleImage = styled.div`
 
 export const Section2 = styled.section`
     width: 100%;
-    height: 500px;
+    padding: 30px;
+    position: relative;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &:before {
+        content: "";
+        position: absolute;
+        height: 100%; 
+        width: 100%;
+        left: 0;
+        background: url('/images/pexels-malte.jpg');
+        background-size: cover;
+        background-position: center;
+        z-index: -1;
+        top: 0;
+    }
+    .letters{
+        color: black;
+        font-size: 22px;
+        letter-spacing: 1pt;
+        max-width: 500px;
+        text-align: center;
+        p{
+            color: #252424;
+            margin-top: 10px;
+        }
+        @media only screen and (min-width: 990px) {
+            text-align: left;
+        }
+    }
+
+    .images{
+        position: relative;
+        img{
+            color: transparent;
+            box-shadow: 0 2px 6px black;
+            border: 1px solid;
+            border-radius: 9px;
+        }
+        .tt{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%) translateY(130px);
+        }
+    }
+`;
+export const Section3 = styled.section`
+    width: 94%;
+    margin-left: 24px;
+    padding: 30px;
+    background-color: #de4503;
+    color: white;
+    font-size: 22px;
+    letter-spacing: 1pt;
+    text-shadow: 0 2px 5px black;
+
 `;

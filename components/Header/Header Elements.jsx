@@ -17,7 +17,9 @@ export const NavContainer = styled.nav`
     justify-content: space-between;
     align-items: center;
     gap: 10px;
-    margin-bottom: 8px;
+    img{
+        filter: drop-shadow(0 2px 3px #5502028f);
+    }
     a{
         color: var(--Black);
         cursor: pointer;
