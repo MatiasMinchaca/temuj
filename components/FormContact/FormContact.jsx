@@ -9,7 +9,7 @@ import InstagramIcon from '../Icons/InstagramIcon';
 import FacebookIcon from '../Icons/FacebookIcon';
 
 const FormContact = () => {
-    let {message, setMessage} = useState(true);
+    const [message, setMessage] = useState('disabled');
 
     const handleSubmit = async(e) => {
         e.preventDefault()
@@ -22,46 +22,50 @@ const FormContact = () => {
             }
         })
 
-        const result = await response.json()
-        console.log(response.ok)
+        const result = await response.json();
+
         if(response.ok){
-            setMessage(true)
+            setMessage('active')
         }
     };
 
     return (
-        <Container >
-            <div class="contact-box">
+        <Container id='contact-section'>
+            <div className="contact-box">
                 <div className="contact-links">
                     <h2>CONTACTO</h2>
                     <div className="links">
                         <div className="link">
-                            <a><InstagramIcon width={40} height={40} fill={'#fafafa11'} /></a>
+                            <a href='https://www.instagram.com/temuj_srl/?igshid=MWZjMTM2ODFkZg%3D%3D'><InstagramIcon width={40} height={40} fill={'#fafafa11'} /></a>
                         </div>
                         <div className="link">
-                            <a><FacebookIcon width={40} height={40} fill={'#ffffff'} /></a>
+                            <a href='https://www.facebook.com/profile.php?id=61550838815749&mibextid=ZbWKwL'><FacebookIcon width={40} height={40} fill={'#ffffff'} /></a>
                         </div>
                         <div className="link">
-                            <a><WhatsAppIcon width={40} height={40} fill={'#ffffff'} /></a>
+                            <a href='https://api.whatsapp.com/send?phone=5493873637283'><WhatsAppIcon width={40} height={40} fill={'#ffffff'} /></a>
                         </div>
                     </div>
                 </div>
                 <div className="contact-form-wrapper">
-                    <form  action="https://formspree.io/f/xvojqzej" method="POST" onSubmit={handleSubmit}>
+                    <form  action="https://formspree.io/f/mgejzkoy" method="POST" onSubmit={handleSubmit}>
                         <div className="form-item">
                             <input type="text" name="name" id="name" required />
                             <label>Nombre:</label>
                         </div>
                         <div className="form-item">
                             <input type="email" name="email" id="email" required />
-                            <label>Email:</label>
+                            <label>Correo Electronico:</label>
+                        </div>
+                        <div className="form-item">
+                            <input type="number" name="phone" id="phone" required />
+                            <label>Celular:</label>
                         </div>
                         <div className="form-item">
                             <textarea className="" name="message" id="message" required></textarea>
                             <label>Mensaje:</label>
                         </div>
-                        <button className="submit-btn" {...message ? 'disabled' : ''}>Send</button>
-                        <p className={message == true ? 'active' : 'disabled'}>Tu mensaje lo recibimos correctamente, nos podremos en contacto lo antes posible, gracias.</p>
+                        <button className="submit-btn" >Enviar</button>
+                        <p className={message == 'active' ? 'active' : 'disabled'}>Tu mensaje lo recibimos correctamente, nos podremos en contacto lo antes posible, gracias.</p>
                     </form>
                 </div>
             </div>

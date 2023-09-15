@@ -49,7 +49,7 @@ export default function Home() {
             </Link>
             <Link
               activeClass="active"
-              to="section2"
+              to="contact-section"
               spy={true}
               smooth={true}
               offset={-70}

@@ -173,7 +173,7 @@ export const Section2 = styled.section`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     &:before {
         content: "";
         position: absolute;
@@ -192,6 +192,7 @@ export const Section2 = styled.section`
         letter-spacing: 1pt;
         max-width: 500px;
         text-align: center;
+        padding: 20px;
         p{
             color: #252424;
             margin-top: 10px;
@@ -208,6 +209,8 @@ export const Section2 = styled.section`
             box-shadow: 0 2px 6px black;
             border: 1px solid;
             border-radius: 9px;
+            width: 130px;
+            height: 200px;
         }
         .tt{
             position: absolute;

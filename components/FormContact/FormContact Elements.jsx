@@ -5,6 +5,13 @@ export const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 75px;
+    @media only screen and (min-width: 400px) {
+        padding-top: 25px;
+    }
+    @media only screen and (min-width: 820px) {
+        padding-top: 0;
+    }
     .contact-box {
     width: clamp(100px, 90%, 1000px);
     margin: 80px 50px;
@@ -34,7 +41,10 @@ export const Container = styled.div`
         circle at 0% 0%, #263a53 0 40%, transparent 40.2%
         ), 
         #1f2e43;
-    border-radius: 10px 0 0 10px;
+        border-radius: 10px 0 0 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .contact-form-wrapper {
